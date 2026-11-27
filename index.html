@@ -1,452 +1,226 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WEBNOVA | Professional Website Design</title>
-<meta name="description" content="Professional websites for businesses, shops, restaurants and brands. Contact WEBNOVA for your website.">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#080d1b;color:#fff;line-height:1.6}
-header{display:flex;justify-content:space-between;align-items:center;padding:22px 8%;background:#0d1428}
-.logo{font-size:27px;font-weight:bold;color:#a78bfa}
-nav a{color:white;text-decoration:none;margin-left:22px;font-size:14px}
-.hero{text-align:center;padding:110px 20px 90px;background:radial-gradient(ellipse at top,#33216a,#080d1b 70%)}
-.tag{color:#c4b5fd;letter-spacing:2px;font-size:13px}
-h1{font-size:clamp(38px,6vw,65px);line-height:1.15;margin:22px auto;max-width:850px}
-h1 span{color:#a78bfa}
-.hero p{color:#b8c1d5;max-width:620px;margin:20px auto}
-.btn{display:inline-block;padding:14px 25px;border-radius:9px;text-decoration:none;font-weight:bold;margin:10px 5px}
-.primary{background:#8055ed;color:white}
-.secondary{border:1px solid #a78bfa;color:white}
-section{padding:75px 8%}
-.heading{text-align:center;margin-bottom:40px}
-.heading h2{font-size:34px}
-.heading p{color:#aab3c7;margin-top:10px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.service{background:#111b31;border:1px solid #26334f;border-radius:15px;padding:27px}
-.service .emoji{font-size:35px}
-.service h3{margin:14px 0 8px}
-.service p{color:#aab3c7;font-size:14px}
-.about{text-align:center;background:#10182b}
-.about p{max-width:700px;margin:15px auto;color:#b8c1d5}
-.contact{max-width:650px;margin:auto;background:#111b31;padding:30px;border-radius:16px}
-input,select,textarea{width:100%;padding:14px;margin:9px 0;background:#080f20;border:1px solid #34415e;border-radius:8px;color:white}
-textarea{min-height:110px}
-button{width:100%;padding:15px;background:#8055ed;color:white;border:0;border-radius:8px;font-weight:bold;font-size:16px;cursor:pointer}
-footer{text-align:center;padding:28px;color:#8e9ab1;background:#080d18}
-@media(max-width:650px){header{flex-direction:column;gap:15px}nav a{margin:0 7px;font-size:12px}.hero{padding:75px 15px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEBNOVA | Websites That Grow Your Business</title>
+  <meta name="description" content="WEBNOVA creates modern, mobile-friendly websites for businesses, shops, restaurants and brands.">
+  <meta name="theme-color" content="#080b22">
+  <style>
+    :root{
+      --bg:#070a1c;--panel:#111638;--panel2:#171d49;--purple:#8b3dff;
+      --pink:#d13cff;--blue:#22baff;--text:#f7f7ff;--muted:#b9c1df;
+      --line:rgba(157,119,255,.28);--glow:0 0 28px rgba(139,61,255,.28);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+    a{color:inherit}
+    .site-header{position:sticky;top:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px clamp(18px,5vw,76px);background:rgba(7,10,28,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:27px;font-weight:900;letter-spacing:-1px}
+    .brand-mark{display:grid;place-items:center;width:39px;height:35px;border-radius:11px;background:linear-gradient(135deg,var(--blue),var(--purple),var(--pink));font-weight:900;font-size:24px;box-shadow:var(--glow)}
+    .brand span:last-child{background:linear-gradient(90deg,#fff,#b99aff);background-clip:text;color:transparent}
+    .nav{display:flex;align-items:center;gap:clamp(12px,2.2vw,30px)}
+    .nav a{text-decoration:none;color:#e8e9ff;font-size:14px;font-weight:700;transition:.2s}
+    .nav a:hover{color:#c59cff}
+    .whatsapp-top{white-space:nowrap;text-decoration:none;padding:10px 17px;border-radius:999px;background:#08b968;color:white;font-weight:800;font-size:13px;box-shadow:0 0 20px #08b96855}
+    .menu-toggle{display:none;background:none;border:1px solid var(--line);color:white;border-radius:10px;padding:8px 12px;font-size:20px;width:auto}
+    .hero{position:relative;isolation:isolate;min-height:610px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:25px;padding:75px clamp(20px,7vw,110px);background:radial-gradient(ellipse at 78% 35%,#3b1684 0,transparent 38%),radial-gradient(ellipse at 10% 90%,#111e62 0,transparent 40%),linear-gradient(120deg,#080b22,#090d2b 60%,#10082d);overflow:hidden}
+    .hero:before,.hero:after{content:"";position:absolute;z-index:-1;width:650px;height:220px;border:2px solid #743cff66;border-radius:50%;transform:rotate(-13deg);filter:blur(1px);right:-100px;bottom:20px;box-shadow:0 0 35px #7a35ff66}
+    .hero:after{width:500px;height:160px;right:7%;bottom:70px;border-color:#1cbbff55;transform:rotate(12deg)}
+    .eyebrow{color:#a9c8ff;font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+    .hero h1{font-size:clamp(42px,6vw,76px);line-height:1.04;letter-spacing:-2.5px;margin:20px 0}
+    .gradient-text{background:linear-gradient(90deg,#c27aff,#4ccaff);background-clip:text;color:transparent}
+    .hero-copy{max-width:590px;color:var(--muted);font-size:18px;margin-bottom:26px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;padding:14px 22px;border-radius:12px;font-weight:800;border:1px solid transparent;transition:.25s}
+    .btn-primary{background:linear-gradient(100deg,#8a35ff,#c13cff);box-shadow:0 8px 28px #9b39ff55}
+    .btn-outline{border-color:#9b8dff88;background:#ffffff08}
+    .btn:hover{transform:translateY(-4px);box-shadow:0 12px 30px #8a35ff55}
+    .hero-art{position:relative;min-height:380px;display:grid;place-items:center}
+    .device-glow{position:absolute;width:340px;height:260px;border-radius:50%;background:#812eff66;filter:blur(65px)}
+    .laptop{position:relative;width:min(100%,510px);padding:15px 15px 20px;border:3px solid #a6a8ff;border-radius:20px 20px 12px 12px;background:linear-gradient(145deg,#30366c,#090d25 55%);transform:perspective(900px) rotateY(-9deg) rotateX(4deg);box-shadow:0 25px 65px #0009,0 0 35px #873dff88}
+    .laptop-screen{min-height:260px;border-radius:10px;background:radial-gradient(circle at 75% 30%,#8a39ff88,transparent 35%),linear-gradient(135deg,#111a52,#090b20);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:25px}
+    .laptop-screen .big-w{font-size:82px;font-weight:1000;line-height:1;background:linear-gradient(135deg,#37d2ff,#a43cff);background-clip:text;color:transparent}
+    .laptop-screen strong{font-size:29px;letter-spacing:2px}
+    .laptop-screen small{color:#c4c9ff;letter-spacing:3px}
+    .laptop-base{height:15px;width:112%;margin-left:-6%;background:linear-gradient(#b9c5ff,#4b548c 55%,#20264d);border-radius:0 0 35px 35px}
+    .phone{position:absolute;right:2%;bottom:10px;width:105px;height:205px;border:4px solid #aab2ff;border-radius:22px;background:linear-gradient(150deg,#27105b,#080d27);box-shadow:0 0 28px #9d42ff88;display:grid;place-items:center;text-align:center;transform:rotate(8deg)}
+    .phone b{font-size:38px;color:#b77aff}.phone span{font-size:11px;font-weight:800}
+    .floating-chip{position:absolute;padding:12px 15px;border-radius:14px;background:#171b49dd;border:1px solid #8c65ff88;box-shadow:var(--glow);font-size:23px}
+    .chip-one{top:22px;left:2%}.chip-two{right:1%;top:25px}.chip-three{bottom:20px;left:0}
+    section{padding:78px clamp(20px,7vw,110px)}
+    .section-heading{text-align:center;margin-bottom:38px}
+    .section-heading .eyebrow{font-size:11px}
+    .section-heading h2{font-size:clamp(30px,4vw,43px);line-height:1.15;margin:8px 0}
+    .section-heading p{color:var(--muted)}
+    .services{background:linear-gradient(180deg,#080b20,#0b1030)}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service-card{padding:26px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#171d49,#0d1230);transition:.3s;min-height:190px}
+    .service-card:hover{transform:translateY(-7px);border-color:#a35cff;box-shadow:var(--glow)}
+    .service-icon{font-size:35px}.service-card h3{margin:12px 0 5px}.service-card p{color:var(--muted);font-size:14px}
+    .portfolio{background:radial-gradient(ellipse at 50% 0,#25105a,#080b20 65%)}
+    .portfolio-layout{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(280px,.8fr);gap:25px;align-items:start}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .work-card{overflow:hidden;border:1px solid #7351bf88;border-radius:15px;background:#101638;transition:.3s}
+    .work-card:hover{transform:translateY(-5px);box-shadow:var(--glow);border-color:#b77aff}
+    .work-preview{height:145px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:15px;overflow:hidden}
+    .work-preview:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#ffffff22,transparent 55%)}
+    .work-preview span{position:relative;font-size:48px;filter:drop-shadow(0 6px 10px #0008)}
+    .work-preview small{position:absolute;left:10px;bottom:10px;padding:5px 9px;border-radius:8px;background:#080b20bb;font-size:11px;font-weight:800}
+    .preview-shop{background:linear-gradient(135deg,#123f70,#26a6c8)}.preview-food{background:linear-gradient(135deg,#5a1d12,#e58b30)}.preview-business{background:linear-gradient(135deg,#101f55,#4383d9)}.preview-salon{background:linear-gradient(135deg,#722a70,#f29dbb)}.preview-home{background:linear-gradient(135deg,#245d4c,#91bd88)}.preview-personal{background:linear-gradient(135deg,#17154f,#8b45dc)}.preview-school{background:linear-gradient(135deg,#164b82,#57b7dc)}.preview-clinic{background:linear-gradient(135deg,#075b70,#67d5d7)}.preview-build{background:linear-gradient(135deg,#73502a,#e5b15e)}
+    .work-title{padding:11px 12px;font-size:13px;font-weight:800;text-align:center}
+    .request-box{position:sticky;top:100px;padding:25px;border-radius:20px;border:1px solid #a35cff88;background:linear-gradient(145deg,#21124e,#101638);box-shadow:var(--glow)}
+    .request-box h3{font-size:24px}.request-box>p{color:var(--muted);font-size:13px;margin:5px 0 15px}
+    .request-box input,.request-box select,.request-box textarea{width:100%;padding:13px 14px;margin:7px 0;border:1px solid #514a8d;border-radius:10px;background:#090f2a;color:white;font:inherit;font-size:14px;outline:none}
+    .request-box input:focus,.request-box select:focus,.request-box textarea:focus{border-color:#bd79ff;box-shadow:0 0 0 3px #9a4dff22}
+    .request-box select option{background:#101638}.request-box textarea{min-height:100px;resize:vertical}
+    .request-box button{width:100%;padding:14px;border:0;border-radius:10px;color:white;font-weight:900;font-size:15px;background:linear-gradient(100deg,#8538ff,#c13cff);cursor:pointer;margin-top:8px}
+    .why{background:#0b1028}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .why-card{text-align:center;padding:25px 18px;border:1px solid var(--line);border-radius:16px;background:#111735}
+    .why-card .ico{font-size:32px}.why-card h3{margin:9px 0}.why-card p{font-size:13px;color:var(--muted)}
+    .stats{padding:28px clamp(20px,7vw,110px);background:linear-gradient(90deg,#17114b,#0e2450,#29104b)}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;text-align:center}
+    .stat strong{display:block;font-size:32px;color:#c49aff}.stat span{font-size:13px;color:#d6d9f3}
+    .bottom-cta{padding:55px 25px;text-align:center;background:radial-gradient(ellipse at center,#5420a8,#0b1028 70%)}
+    .bottom-cta h2{font-size:clamp(28px,4vw,42px)}.bottom-cta p{max-width:650px;margin:10px auto 22px;color:var(--muted)}
+    footer{padding:30px clamp(20px,7vw,110px);background:#050718;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#aeb5d4;font-size:13px}
+    .footer-links{display:flex;gap:17px;flex-wrap:wrap}.footer-links a{text-decoration:none}.footer-links a:hover{color:white}
+    .floating-whatsapp{position:fixed;right:22px;bottom:22px;z-index:9999;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#09bd68;color:white;text-decoration:none;font-size:29px;box-shadow:0 0 24px #09bd6877}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center}.hero-copy{margin-left:auto;margin-right:auto}.actions{justify-content:center}.hero-art{min-height:330px}.portfolio-layout{grid-template-columns:1fr}.request-box{position:static}.service-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:650px){.site-header{flex-wrap:wrap}.menu-toggle{display:block}.nav{display:none;order:3;width:100%;flex-direction:column;align-items:stretch;padding:10px 0}.nav.open{display:flex}.nav a{padding:8px 4px}.whatsapp-top{margin-left:auto}.hero{padding-top:55px;min-height:auto}.hero h1{letter-spacing:-1.5px}.hero-art{min-height:270px}.laptop{width:90%}.laptop-screen{min-height:180px}.phone{width:78px;height:155px}.floating-chip{font-size:17px;padding:8px}.service-grid{grid-template-columns:1fr}.portfolio-grid{grid-template-columns:repeat(2,1fr)}.work-preview{height:115px}.why-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr);row-gap:20px}section{padding-top:58px;padding-bottom:58px}footer{justify-content:center;text-align:center}.footer-links{justify-content:center}}
+  </style>
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="#home"><span class="brand-mark">W</span><span>WEBNOVA</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+    <nav class="nav" id="mainNav">
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="whatsapp-top" href="https://wa.me/966531916632" target="_blank" rel="noopener">☏ WhatsApp Us</a>
+  </header>
 
-<header>
-<div class="logo">WEBNOVA.</div>
-<nav>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <div class="eyebrow">Your business. Our digital expertise.</div>
+        <h1>We Build Websites That <span class="gradient-text">Grow Your Business.</span></h1>
+        <p class="hero-copy">Professional, modern and mobile-friendly websites for small businesses, shops, restaurants and brands.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact">🚀 Get Your Website →</a>
+          <a class="btn btn-outline" href="#services">▦ Explore Services</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="WEBNOVA website design displayed on laptop and phone">
+        <div class="device-glow"></div><div class="floating-chip chip-one">🌐</div><div class="floating-chip chip-two">✦</div><div class="floating-chip chip-three">⌘</div>
+        <div class="laptop"><div class="laptop-screen"><div class="big-w">W</div><strong>WEBNOVA</strong><small>DREAM · DESIGN · GROW</small></div><div class="laptop-base"></div></div>
+        <div class="phone"><div><b>W</b><br><span>WEBNOVA</span></div></div>
+      </div>
+    </section>
 
-<div class="hero" id="home">
-<div class="tag">YOUR BUSINESS. OUR DIGITAL EXPERTISE.</div>
-<h1>We Build Websites That <span>Grow Your Business.</span></h1>
-<p>Professional, modern and mobile-friendly websites for small businesses, shops, restaurants and brands.</p>
-<a href="#contact" class="btn primary">Get Your Website</a>
-<a href="#services" class="btn secondary">Explore Services</a>
-</div>
+    <section class="services" id="services">
+      <div class="section-heading"><div class="eyebrow">What we create</div><h2>Our Services</h2><p>Website solutions for every business.</p></div>
+      <div class="service-grid">
+        <article class="service-card"><div class="service-icon">🛍️</div><h3>Online Shopping</h3><p>Professional product displays and eCommerce websites for selling online.</p></article>
+        <article class="service-card"><div class="service-icon">🍽️</div><h3>Restaurant Websites</h3><p>Menus, food galleries, location details and customer contact options.</p></article>
+        <article class="service-card"><div class="service-icon">🏢</div><h3>Business Websites</h3><p>A professional online identity to showcase your company and services.</p></article>
+        <article class="service-card"><div class="service-icon">💇</div><h3>Salon Websites</h3><p>Showcase treatments, photos, prices and appointment information.</p></article>
+        <article class="service-card"><div class="service-icon">🏠</div><h3>Real Estate</h3><p>Display property listings, photos and enquiry contact information.</p></article>
+        <article class="service-card"><div class="service-icon">👨‍💻</div><h3>Portfolio Websites</h3><p>Present your work, skills, projects and professional experience.</p></article>
+      </div>
+    </section>
 
-<section id="services">
-<div class="heading">
-<h2>Our Services</h2>
-<p>Website solutions for every business.</p>
-</div>
-<div class="grid">
-<div class="service"><div class="emoji">🛍️</div><h3>Online Shopping</h3><p>Professional product display and online shopping websites.</p></div>
-<div class="service"><div class="emoji">🍽️</div><h3>Restaurant Websites</h3><p>Menus, food galleries and customer contact websites.</p></div>
-<div class="service"><div class="emoji">🏢</div><h3>Business Websites</h3><p>Build a professional online identity for your company.</p></div>
-<div class="service"><div class="emoji">💇</div><h3>Salon Websites</h3><p>Showcase services, photos and appointment details.</p></div>
-<div class="service"><div class="emoji">🏠</div><h3>Real Estate</h3><p>Display properties, images and contact information.</p></div>
-<div class="service"><div class="emoji">👨‍💻</div><h3>Portfolio Websites</h3><p>Show your work, skills and professional experience.</p></div>
-</div>
-</section>
+    <section class="portfolio" id="portfolio">
+      <div class="section-heading"><div class="eyebrow">Selected concepts</div><h2>Our Website <span class="gradient-text">Portfolio</span></h2><p>Explore 9 professional website design concepts.</p></div>
+      <div class="portfolio-layout">
+        <div class="portfolio-grid">
+          <article class="work-card"><div class="work-preview preview-shop"><span>🛍️</span><small>SHOP SMART</small></div><div class="work-title">Online Shopping</div></article>
+          <article class="work-card"><div class="work-preview preview-food"><span>🍽️</span><small>DELICIOUS FOOD</small></div><div class="work-title">Restaurant</div></article>
+          <article class="work-card"><div class="work-preview preview-business"><span>🏙️</span><small>GROW YOUR BUSINESS</small></div><div class="work-title">Corporate Business</div></article>
+          <article class="work-card"><div class="work-preview preview-salon"><span>💇</span><small>BEAUTY & STYLE</small></div><div class="work-title">Salon & Beauty</div></article>
+          <article class="work-card"><div class="work-preview preview-home"><span>🏡</span><small>FIND YOUR HOME</small></div><div class="work-title">Real Estate</div></article>
+          <article class="work-card"><div class="work-preview preview-personal"><span>💻</span><small>SHOW YOUR TALENT</small></div><div class="work-title">Personal Portfolio</div></article>
+          <article class="work-card"><div class="work-preview preview-school"><span>🎓</span><small>LEARN & GROW</small></div><div class="work-title">School & College</div></article>
+          <article class="work-card"><div class="work-preview preview-clinic"><span>🏥</span><small>YOUR HEALTH</small></div><div class="work-title">Hospital & Clinic</div></article>
+          <article class="work-card"><div class="work-preview preview-build"><span>🏗️</span><small>BUILD BETTER</small></div><div class="work-title">Construction</div></article>
+        </div>
 
-<section class="about" id="about">
-<div class="heading"><h2>Why Choose WEBNOVA?</h2></div>
-<p>We help businesses build their digital presence with attractive, responsive and user-friendly websites.</p>
-<p>Tell us your requirements. We will design and build your website for you.</p>
-</section>
+        <aside class="request-box" id="contact">
+          <h3>✦ Request Your Website</h3>
+          <p>Tell us about your business. We will contact you.</p>
+          <form id="requestForm">
+            <input id="name" placeholder="Your Name" required>
+            <input id="business" placeholder="Business Name" required>
+            <input id="phone" type="tel" placeholder="Your WhatsApp Number" required>
+            <input id="email" type="email" placeholder="Email Address">
+            <select id="type" required>
+              <option value="">Select Website Type</option>
+              <option>Online Shopping</option><option>Restaurant</option><option>Business Website</option>
+              <option>Salon</option><option>Real Estate</option><option>Portfolio</option>
+              <option>School & College</option><option>Hospital & Clinic</option><option>Construction</option><option>Other</option>
+            </select>
+            <textarea id="details" placeholder="Describe your website requirements"></textarea>
+            <button type="submit">➤ Send Website Request</button>
+          </form>
+        </aside>
+      </div>
+    </section>
 
-<section id="contact">
-<div class="heading">
-<h2>Request Your Website</h2>
-<p>Tell us about your business. We will contact you.</p>
-</div>
-<div class="contact">
-<form id="requestForm">
-<input id="name" placeholder="Your Name" required>
-<input id="business" placeholder="Business Name" required>
-<input id="phone" placeholder="WhatsApp Number" required>
-<input id="email" type="email" placeholder="Email Address">
-<select id="type" required>
-<option value="">Select Website Type</option>
-<option>Online Shopping</option>
-<option>Restaurant</option>
-<option>Business Website</option>
-<option>Salon</option>
-<option>Real Estate</option>
-<option>Portfolio</option>
-<option>Other</option>
-</select>
-<textarea id="details" placeholder="Describe your website requirements"></textarea>
-<button type="submit">Send Website Request</button>
-</form>
-</div>
-</section>
+    <section class="why" id="about">
+      <div class="section-heading"><div class="eyebrow">The WEBNOVA difference</div><h2>Why Choose WEBNOVA?</h2><p>Everything your business needs to build a strong digital presence.</p></div>
+      <div class="why-grid">
+        <article class="why-card"><div class="ico">💎</div><h3>Modern Design</h3><p>Beautiful, professional designs that create a strong first impression.</p></article>
+        <article class="why-card"><div class="ico">📱</div><h3>Mobile Friendly</h3><p>Responsive layouts designed for phones, tablets and computers.</p></article>
+        <article class="why-card"><div class="ico">🎧</div><h3>Personal Support</h3><p>Direct communication to understand your business needs and requirements.</p></article>
+      </div>
+    </section>
 
-<footer>
-© 2026 WEBNOVA. All Rights Reserved.
-</footer>
+    <div class="stats">
+      <div class="stats-grid">
+        <div class="stat"><strong>24/7</strong><span>Online Support</span></div>
+        <div class="stat"><strong>100%</strong><span>Mobile Friendly</span></div>
+        <div class="stat"><strong>9</strong><span>Design Concepts</span></div>
+        <div class="stat"><strong>∞</strong><span>Creative Possibilities</span></div>
+      </div>
+    </div>
 
-<script>
-document.getElementById("requestForm").addEventListener("submit",function(e){
-e.preventDefault();
-const message=`WEBNOVA Website Request
+    <section class="bottom-cta">
+      <h2>Ready to Grow Your Business?</h2>
+      <p>Let's create a beautiful website for your business. Tell us your idea and we'll help bring it online.</p>
+      <a class="btn btn-primary" href="#contact">Start Your Website Project →</a>
+    </section>
+  </main>
+
+  <footer>
+    <div><a class="brand" href="#home"><span class="brand-mark">W</span><span>WEBNOVA.</span></a><div>Your Business. Our Digital Expertise.</div></div>
+    <div class="footer-links"><a href="#home">Home</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+    <div>© 2026 WEBNOVA. All Rights Reserved.</div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/966531916632" target="_blank" rel="noopener" aria-label="Chat with WEBNOVA on WhatsApp">☏</a>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+    menuToggle.addEventListener("click", () => mainNav.classList.toggle("open"));
+    mainNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => mainNav.classList.remove("open"));
+    });
+
+    document.getElementById("requestForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const message = `WEBNOVA Website Request
 Name: ${document.getElementById("name").value}
 Business: ${document.getElementById("business").value}
 Phone: ${document.getElementById("phone").value}
 Email: ${document.getElementById("email").value}
 Website Type: ${document.getElementById("type").value}
 Details: ${document.getElementById("details").value}`;
-const yourNumber="966531916632";
-if(yourNumber==="YOUR_WHATSAPP_NUMBER"){
-alert("Website design is ready! WhatsApp number setup is pending.");
-return;
-}
-window.open("https://wa.me/"+yourNumber+"?text="+encodeURIComponent(message),"_blank");
-});
-</script>
-  
-<!-- WEBNOVA PREMIUM UPGRADE -->
-
-<style>
-:root {
-  --nova-purple: #9565ff;
-  --nova-light: #c4a7ff;
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-  overflow-x: hidden;
-}
-
-.nova-stats {
-  padding: 65px 20px;
-  background: linear-gradient(120deg,#17132f,#101a32,#211443);
-  text-align: center;
-  color: white;
-}
-
-.nova-stats-grid {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
-  gap: 25px;
-}
-
-.nova-stat {
-  padding: 25px;
-  border: 1px solid #514078;
-  border-radius: 18px;
-  background: #ffffff08;
-  transition: .3s;
-}
-
-.nova-stat:hover {
-  transform: translateY(-8px);
-  border-color: var(--nova-purple);
-  box-shadow: 0 10px 35px #9565ff30;
-}
-
-.nova-stat h2 {
-  color: var(--nova-light);
-  font-size: 38px;
-  margin: 0 0 10px;
-}
-
-.nova-stat p {
-  color: #c9c5db;
-  margin: 0;
-}
-
-.nova-reviews {
-  padding: 85px 20px;
-  background: #090d1b;
-  color: white;
-  text-align: center;
-}
-
-.nova-reviews h2,
-.nova-contact h2 {
-  font-size: 34px;
-  margin-bottom: 12px;
-}
-
-.nova-review-grid {
-  max-width: 1100px;
-  margin: 40px auto 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 22px;
-}
-
-.nova-review {
-  padding: 28px;
-  border-radius: 18px;
-  text-align: left;
-  background: linear-gradient(145deg,#171d35,#242044);
-  border: 1px solid #34304e;
-  transition: .3s;
-}
-
-.nova-review:hover {
-  transform: translateY(-8px);
-  border-color: var(--nova-purple);
-}
-
-.nova-review .stars {
-  color: #ffc857;
-  letter-spacing: 3px;
-  font-size: 19px;
-}
-
-.nova-review p {
-  color: #c8c8d8;
-  line-height: 1.7;
-}
-
-.nova-review h4 {
-  color: var(--nova-light);
-  margin-bottom: 4px;
-}
-
-.nova-contact {
-  padding: 90px 20px;
-  text-align: center;
-  color: white;
-  background:
-    radial-gradient(ellipse at top,#49258c 0%,transparent 65%),
-    linear-gradient(135deg,#10152a,#17102d);
-}
-
-.nova-contact p {
-  color: #d0c9e5;
-  line-height: 1.8;
-  max-width: 600px;
-  margin: 15px auto 28px;
-}
-
-.nova-button {
-  display: inline-block;
-  background: linear-gradient(110deg,#8150f5,#b16bff);
-  color: white;
-  text-decoration: none;
-  padding: 15px 30px;
-  border-radius: 10px;
-  font-weight: bold;
-  transition: .3s;
-  box-shadow: 0 8px 25px #9565ff35;
-}
-
-.nova-button:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 35px #9565ff70;
-}
-
-.nova-footer {
-  background: #070b16;
-  padding: 45px 20px 25px;
-  text-align: center;
-  color: #b9b9ce;
-  border-top: 1px solid #27243c;
-}
-
-.nova-footer h2 {
-  color: var(--nova-light);
-  font-size: 28px;
-}
-
-.nova-footer a {
-  color: #c5aaff;
-  text-decoration: none;
-  margin: 0 10px;
-  display: inline-block;
-  padding: 8px 0;
-}
-
-.nova-footer a:hover {
-  color: white;
-}
-
-.nova-whatsapp {
-  position: fixed;
-  right: 22px;
-  bottom: 22px;
-  z-index: 9999;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: #20c96b;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 29px;
-  text-decoration: none;
-  box-shadow: 0 5px 25px #20c96b55;
-  transition: .3s;
-}
-
-.nova-whatsapp:hover {
-  transform: scale(1.12);
-}
-
-@media(max-width:600px) {
-  .nova-reviews h2,
-  .nova-contact h2 {
-    font-size: 27px;
-  }
-  .nova-stat h2 { font-size: 32px; }
-}
-</style>
-
-<!-- STATISTICS -->
-<section class="nova-stats">
-  <div class="nova-stats-grid">
-    <div class="nova-stat">
-      <h2>24/7</h2>
-      <p>Online Support</p>
-    </div>
-    <div class="nova-stat">
-      <h2>100%</h2>
-      <p>Mobile Friendly</p>
-    </div>
-    <div class="nova-stat">
-      <h2>3+</h2>
-      <p>Website Solutions</p>
-    </div>
-    <div class="nova-stat">
-      <h2>∞</h2>
-      <p>Creative Possibilities</p>
-    </div>
-  </div>
-</section>
-
-<!-- CUSTOMER EXPERIENCE -->
-<section class="nova-reviews">
-  <h2>Why Choose WEBNOVA?</h2>
-  <p style="color:#aaa;">Everything your business needs to grow online.</p>
-
-  <div class="nova-review-grid">
-    <div class="nova-review">
-      <div class="stars">✦ ✦ ✦</div>
-      <h4>Modern Design</h4>
-      <p>Beautiful and professional website designs that help your business create a strong first impression.</p>
-    </div>
-    <div class="nova-review">
-      <div class="stars">✦ ✦ ✦</div>
-      <h4>Mobile Friendly</h4>
-      <p>Responsive layouts designed to work smoothly on mobile phones, tablets and computers.</p>
-    </div>
-    <div class="nova-review">
-      <div class="stars">✦ ✦ ✦</div>
-      <h4>Personal Support</h4>
-      <p>Direct communication to understand your business needs and website requirements.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT CTA -->
-<section class="nova-contact">
-  <h2>Ready to Grow Your Business?</h2>
-  <p>Let's create a beautiful website for your business. Tell us your idea and we'll help bring it online.</p>
-  <a href="#contact" class="nova-button">Start Your Website Project →</a>
-</section>
-
-<!-- FOOTER -->
-<footer class="nova-footer">
-  <h2>WEBNOVA.</h2>
-  <p>Your Business. Our Digital Expertise.</p>
-  <div>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <p style="font-size:13px;margin-top:25px;">
-    © 2026 WEBNOVA. All Rights Reserved.
-  </p>
-</footer>
-
-<!-- FLOATING WHATSAPP -->
-<a class="nova-whatsapp"
-   href="https://wa.me/966531916632"
-   target="_blank"
-   rel="noopener"
-   aria-label="Contact WEBNOVA on WhatsApp">☏</a>
-
+      const yourNumber = "966531916632";
+      window.open("https://wa.me/" + yourNumber + "?text=" + encodeURIComponent(message), "_blank");
+    });
+  </script>
 </body>
-  
-<section id="portfolio" style="padding:80px 20px;background:#0b1020;color:white;text-align:center;">
-  <h2 style="font-size:36px;margin-bottom:12px;">Our Website Portfolio</h2>
-  <p style="color:#b8bfd3;margin-bottom:40px;">Explore 9 professional website design concepts</p>
-
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;max-width:1100px;margin:auto;">
-
-    <div class="portfolio-card"><div class="portfolio-icon">🛍️</div><h3>Online Shopping</h3><p>Modern eCommerce website for selling products online.</p></div>
-    <div class="portfolio-card"><div class="portfolio-icon">🍽️</div><h3>Restaurant</h3><p>Beautiful restaurant website with menu and contact details.</p></div>
-    <div class="portfolio-card"><div class="portfolio-icon">🏢</div><h3>Corporate Business</h3><p>Professional website to showcase your company.</p></div>
-    <div class="portfolio-card"><div class="portfolio-icon">💇</div><h3>Salon & Beauty</h3><p>Stylish website for salons and beauty businesses.</p></div>
-    <div class="portfolio-card"><div class="portfolio-icon">🏡</div><h3>Real Estate</h3><p>Property listing website for real estate businesses.</p></div>
-    <div class="portfolio-card"><div class="portfolio-icon">👨‍💻</div><h3>Personal Portfolio</h3><p>Showcase your skills, projects and experience.</p></div>
-    <div class="portfolio-card"><div class="portfolio-icon">🎓</div><h3>School & College</h3><p>Website for educational institutions.</p></div>
-    <div class="portfolio-card"><div class="portfolio-icon">🏥</div><h3>Hospital & Clinic</h3><p>Healthcare website with services and information.</p></div>
-    <div class="portfolio-card"><div class="portfolio-icon">🏗️</div><h3>Construction</h3><p>Professional website for construction companies.</p></div>
-
-  </div>
-</section>
-
-<style>
-.portfolio-card {
-  background:linear-gradient(145deg,#171d35,#202746);
-  border:1px solid #343d60;
-  border-radius:18px;
-  padding:30px 22px;
-  transition:transform .3s,border-color .3s;
-}
-.portfolio-card:hover {
-  transform:translateY(-7px);
-  border-color:#a78bfa;
-}
-.portfolio-icon {
-  font-size:48px;
-  margin-bottom:15px;
-}
-.portfolio-card h3 {
-  color:#c4b5fd;
-  margin:10px 0;
-}
-.portfolio-card p {
-  color:#c1c7d8;
-  line-height:1.6;
-  font-size:14px;
-}
-</style>
-
 </html>
