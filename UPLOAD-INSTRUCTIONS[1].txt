@@ -1,0 +1,18 @@
+WEBNOVA live portfolio update
+
+1. Open your GitHub repository: IGEL-CPs.
+2. Upload these FOUR files to the repository root (same folder as the existing index.html):
+   - index.html (replace the existing file)
+   - restaurant-demo.html
+   - salon-demo.html
+   - business-demo.html
+3. Commit changes to the main branch.
+4. Wait for GitHub Pages to publish, then open:
+   https://kidstimezone4-cmd.github.io/IGEL-CPs/
+5. In the Portfolio section, Restaurant, Business and Salon cards now have "View Live Demo" links.
+
+Important:
+- Keep all four files together in the repository root. The demo links are relative paths.
+- Existing WEBNOVA black-and-gold design, services, about, process, contact form and WhatsApp request flow are preserved.
+- The three demos are sample concepts, not real client projects. Replace demo names/content/photos/contact details for each real customer.
+- Images load from Unsplash and require an internet connection.
