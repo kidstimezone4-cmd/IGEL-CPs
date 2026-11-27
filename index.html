@@ -8,8 +8,6 @@
 <meta name="google-site-verification" content="al-eJzYfLG4_EdWlEDC61JnrYzrvJxzYAFppl2Uw2VI">
 <title>WEBNOVA — Future-Ready Digital Experiences</title>
 <meta name="description" content="WEBNOVA creates futuristic websites and digital experiences for ambitious brands.">
-</head>
-
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +23,7 @@
   --muted:#a1a1b8;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
 body{
   background:var(--bg);
   color:var(--white);
@@ -37,114 +35,196 @@ body:before{
   position:fixed;
   inset:0;
   pointer-events:none;
-  z-index:-1;
+  z-index:0;
   background:
     radial-gradient(ellipse at 15% 15%,#49208030,transparent 38%),
     radial-gradient(ellipse at 85% 40%,#087d9b20,transparent 35%);
 }
+body > *{position:relative;z-index:1}
 a{text-decoration:none;color:inherit}
 .container{width:min(1160px,90%);margin:auto}
+
 nav{
-  position:fixed;top:0;left:0;width:100%;z-index:100;
-  background:#080815c9;
+  position:fixed;
+  top:0;left:0;width:100%;
+  z-index:100;
+  background:#080815e8;
   backdrop-filter:blur(18px);
   border-bottom:1px solid #ffffff12;
 }
 .nav-inner{
-  height:78px;display:flex;align-items:center;
+  height:78px;
+  display:flex;
+  align-items:center;
   justify-content:space-between;
 }
 .logo{
   font-family:"Space Grotesk",sans-serif;
-  font-size:27px;font-weight:700;letter-spacing:-1.5px;
+  font-size:27px;
+  font-weight:700;
+  letter-spacing:-1.5px;
 }
 .logo span{color:var(--cyan)}
 .nav-links{display:flex;gap:30px;align-items:center}
-.nav-links a{font-size:13px;color:#c4c4d5;transition:.3s}
+.nav-links a{
+  font-size:13px;
+  color:#c4c4d5;
+  transition:.3s;
+}
 .nav-links a:hover{color:var(--cyan)}
 .nav-btn,.primary-btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  padding:13px 22px;border-radius:30px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 22px;
+  border-radius:30px;
   background:linear-gradient(110deg,var(--purple),#5d83ff);
-  color:white;font-size:13px;font-weight:700;
+  color:white;
+  font-size:13px;
+  font-weight:700;
   box-shadow:0 0 28px #9160ff35;
   transition:.3s;
 }
-.nav-btn:hover,.primary-btn:hover{transform:translateY(-3px);box-shadow:0 8px 35px #9160ff65}
-.menu-toggle{display:none;background:none;border:0;color:white;font-size:27px}
+.nav-btn:hover,.primary-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 35px #9160ff65;
+}
+.menu-toggle{
+  display:none;
+  background:none;
+  border:0;
+  color:white;
+  font-size:27px;
+  cursor:pointer;
+}
 
 .hero{
-  min-height:760px;padding:155px 0 90px;
-  display:flex;align-items:center;position:relative;
+  min-height:760px;
+  padding:155px 0 90px;
+  display:flex;
+  align-items:center;
+  position:relative;
 }
 .hero-grid{
-  display:grid;grid-template-columns:1.05fr .95fr;
-  gap:45px;align-items:center;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:45px;
+  align-items:center;
 }
 .eyebrow{
-  display:inline-flex;align-items:center;gap:9px;
-  color:var(--cyan);font-size:11px;letter-spacing:2.5px;
-  text-transform:uppercase;font-weight:700;
-  padding:10px 15px;border:1px solid #48e5ff38;
-  border-radius:30px;background:#48e5ff0a;
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--cyan);
+  font-size:11px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  font-weight:700;
+  padding:10px 15px;
+  border:1px solid #48e5ff38;
+  border-radius:30px;
+  background:#48e5ff0a;
 }
-.dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}
+.dot{
+  width:7px;height:7px;
+  border-radius:50%;
+  background:var(--cyan);
+  box-shadow:0 0 12px var(--cyan);
+}
 h1{
   font-family:"Space Grotesk",sans-serif;
   font-size:clamp(48px,6.5vw,79px);
-  line-height:1.03;letter-spacing:-4px;
+  line-height:1.03;
+  letter-spacing:-4px;
   margin:27px 0 23px;
 }
 .gradient-text{
   background:linear-gradient(100deg,#a879ff,#54dfff);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
 }
-.hero-copy{max-width:510px;color:var(--muted);line-height:1.9;font-size:15px}
-.hero-actions{display:flex;gap:15px;align-items:center;margin-top:32px;flex-wrap:wrap}
+.hero-copy{
+  max-width:510px;
+  color:var(--muted);
+  line-height:1.9;
+  font-size:15px;
+}
+.hero-actions{
+  display:flex;
+  gap:15px;
+  align-items:center;
+  margin-top:32px;
+  flex-wrap:wrap;
+}
 .secondary-btn{
-  padding:13px 22px;border:1px solid #ffffff30;
-  border-radius:30px;font-size:13px;color:#eee;
+  padding:13px 22px;
+  border:1px solid #ffffff30;
+  border-radius:30px;
+  font-size:13px;
+  color:#eee;
   transition:.3s;
 }
 .secondary-btn:hover{border-color:var(--cyan);color:var(--cyan)}
-.hero-note{margin-top:35px;color:#77778f;font-size:11px;letter-spacing:1px}
+.hero-note{
+  margin-top:35px;
+  color:#77778f;
+  font-size:11px;
+  letter-spacing:1px;
+}
 
 .visual{
-  height:470px;position:relative;
-  display:grid;place-items:center;perspective:1000px;
+  height:470px;
+  position:relative;
+  display:grid;
+  place-items:center;
+  perspective:1000px;
 }
 .orbit{
-  position:absolute;width:390px;height:390px;
-  border:1px solid #9b65ff45;border-radius:50%;
+  position:absolute;
+  width:390px;height:390px;
+  border:1px solid #9b65ff45;
+  border-radius:50%;
   transform:rotateX(67deg) rotateZ(-25deg);
   box-shadow:0 0 50px #9b65ff12;
 }
 .orbit.two{
-  width:310px;height:310px;border-color:#48e5ff40;
+  width:310px;height:310px;
+  border-color:#48e5ff40;
   transform:rotateX(67deg) rotateZ(35deg);
 }
 .core{
-  width:205px;height:205px;border-radius:45px;
-  display:grid;place-items:center;
+  width:205px;height:205px;
+  border-radius:45px;
+  display:grid;
+  place-items:center;
   background:linear-gradient(145deg,#b77cff,#4e68dc 55%,#1bd5ed);
   box-shadow:0 0 90px #885bff65,inset 0 2px 20px #ffffff70;
   transform:rotate(-12deg);
   animation:float 5s ease-in-out infinite;
-  position:relative;z-index:2;
+  position:relative;
+  z-index:2;
 }
 .core-inner{
-  width:145px;height:145px;border-radius:35px;
+  width:145px;height:145px;
+  border-radius:35px;
   background:linear-gradient(145deg,#15132e,#090b1c);
-  display:grid;place-items:center;
+  display:grid;
+  place-items:center;
   border:1px solid #ffffff55;
-  color:white;font-family:"Space Grotesk",sans-serif;
-  font-size:55px;font-weight:700;
+  color:white;
+  font-family:"Space Grotesk",sans-serif;
+  font-size:55px;
+  font-weight:700;
   box-shadow:inset 0 0 35px #8f6bff40;
 }
 .float-card{
-  position:absolute;z-index:3;
-  padding:15px 18px;border-radius:15px;
-  background:#17172be8;border:1px solid #ffffff20;
+  position:absolute;
+  z-index:3;
+  padding:15px 18px;
+  border-radius:15px;
+  background:#17172be8;
+  border:1px solid #ffffff20;
   box-shadow:0 15px 45px #0008;
   backdrop-filter:blur(12px);
   font-size:12px;
@@ -154,32 +234,55 @@ h1{
 .card-one{top:55px;right:0}
 .card-two{bottom:65px;left:0}
 .card-three{bottom:35px;right:15px}
+
 @keyframes float{
   0%,100%{transform:translateY(0) rotate(-12deg)}
   50%{transform:translateY(-18px) rotate(-7deg)}
 }
 
 .section{padding:110px 0}
-.section-head{text-align:center;max-width:700px;margin:0 auto 55px}
-.kicker{color:var(--cyan);font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:700}
+.section-head{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 55px;
+}
+.kicker{
+  color:var(--cyan);
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  font-weight:700;
+}
 .section-head h2{
   font-family:"Space Grotesk",sans-serif;
-  font-size:clamp(32px,4vw,48px);letter-spacing:-1.8px;margin:17px 0;
+  font-size:clamp(32px,4vw,48px);
+  letter-spacing:-1.8px;
+  margin:17px 0;
 }
 .section-head p{color:var(--muted);font-size:14px;line-height:1.8}
+
 .services-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 .service-card{
   background:linear-gradient(145deg,#17172b,#0d0e1b);
-  border:1px solid #ffffff12;border-radius:20px;
-  padding:32px 27px;min-height:225px;
-  transition:.35s;position:relative;overflow:hidden;
+  border:1px solid #ffffff12;
+  border-radius:20px;
+  padding:32px 27px;
+  min-height:225px;
+  transition:.35s;
+  position:relative;
+  overflow:hidden;
 }
 .service-card:before{
-  content:"";position:absolute;width:140px;height:140px;
-  background:#8759ff20;filter:blur(55px);
-  right:-45px;top:-45px;transition:.35s;
+  content:"";
+  position:absolute;
+  width:140px;height:140px;
+  background:#8759ff20;
+  filter:blur(55px);
+  right:-45px;top:-45px;
 }
 .service-card:hover{
   transform:translateY(-8px);
@@ -187,29 +290,45 @@ h1{
   box-shadow:0 20px 50px #0005;
 }
 .service-icon{
-  width:49px;height:49px;border-radius:14px;
-  display:grid;place-items:center;
+  width:49px;height:49px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
   background:linear-gradient(135deg,#8c5bff30,#40dfff20);
   border:1px solid #9d75ff55;
-  font-size:22px;margin-bottom:23px;
+  font-size:22px;
+  margin-bottom:23px;
 }
 .service-card h3{font-size:17px;margin-bottom:12px}
 .service-card p{font-size:13px;color:var(--muted);line-height:1.8}
 
-.portfolio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
+}
 .project{
-  border-radius:22px;overflow:hidden;
-  background:#111222;border:1px solid #ffffff16;
+  border-radius:22px;
+  overflow:hidden;
+  background:#111222;
+  border:1px solid #ffffff16;
   transition:.35s;
 }
 .project:hover{transform:translateY(-7px);border-color:#8e6cff80}
 .project-art{
-  height:260px;display:grid;place-items:center;
-  position:relative;overflow:hidden;
+  height:260px;
+  display:grid;
+  place-items:center;
+  position:relative;
+  overflow:hidden;
 }
 .project-art:before{
-  content:"";position:absolute;width:230px;height:230px;
-  border-radius:50%;filter:blur(65px);opacity:.55;
+  content:"";
+  position:absolute;
+  width:230px;height:230px;
+  border-radius:50%;
+  filter:blur(65px);
+  opacity:.55;
 }
 .art-restaurant{background:linear-gradient(135deg,#281b39,#101b32)}
 .art-restaurant:before{background:#ff9b5b}
@@ -220,12 +339,15 @@ h1{
 .art-creative{background:linear-gradient(135deg,#20214b,#121326)}
 .art-creative:before{background:#9272ff}
 .mock-window{
-  position:relative;width:75%;height:165px;
-  border-radius:12px;background:#ffffff13;
+  position:relative;
+  width:75%;height:165px;
+  border-radius:12px;
+  background:#ffffff13;
   border:1px solid #ffffff45;
   backdrop-filter:blur(10px);
   box-shadow:0 20px 50px #0006;
-  padding:13px;transform:perspective(700px) rotateY(-8deg) rotateX(4deg);
+  padding:13px;
+  transform:perspective(700px) rotateY(-8deg) rotateX(4deg);
 }
 .mock-dots{display:flex;gap:5px;margin-bottom:13px}
 .mock-dots i{width:6px;height:6px;background:#ffffff70;border-radius:50%}
@@ -234,39 +356,63 @@ h1{
 .mock-blocks{display:flex;gap:8px;margin-top:15px}
 .mock-blocks i{height:48px;flex:1;border-radius:6px;background:#ffffff24}
 .project-info{padding:23px 25px 26px}
-.project-top{display:flex;justify-content:space-between;gap:15px;align-items:center}
+.project-top{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  align-items:center;
+}
 .project-info h3{font-size:18px}
 .project-info p{font-size:12px;color:var(--muted);margin:10px 0 18px}
 .project-link{font-size:12px;color:var(--cyan);font-weight:700}
 .project-link:hover{text-decoration:underline}
 .tag{font-size:10px;color:#c5b4ff;background:#9b65ff20;padding:7px 10px;border-radius:20px}
 
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
 .about-visual{
-  min-height:350px;border-radius:25px;
+  min-height:350px;
+  border-radius:25px;
   border:1px solid #ffffff18;
   background:radial-gradient(circle at 50% 50%,#6d4bcc55,transparent 60%),#111222;
-  display:grid;place-items:center;position:relative;overflow:hidden;
+  display:grid;
+  place-items:center;
+  position:relative;
+  overflow:hidden;
 }
 .about-symbol{
   font-family:"Space Grotesk",sans-serif;
-  font-size:130px;font-weight:700;
-  color:transparent;-webkit-text-stroke:2px #a78aff;
+  font-size:130px;
+  font-weight:700;
+  color:transparent;
+  -webkit-text-stroke:2px #a78aff;
   text-shadow:0 0 55px #9665ff75;
   transform:rotate(-8deg);
 }
 .about-content h2{
   font-family:"Space Grotesk",sans-serif;
-  font-size:42px;line-height:1.15;letter-spacing:-2px;margin:17px 0;
+  font-size:42px;
+  line-height:1.15;
+  letter-spacing:-2px;
+  margin:17px 0;
 }
 .about-content p{color:var(--muted);font-size:14px;line-height:1.9;margin-bottom:20px}
 .stats{display:flex;gap:35px;margin-top:30px;flex-wrap:wrap}
 .stat strong{display:block;font-size:26px;color:var(--cyan)}
 .stat span{font-size:11px;color:var(--muted)}
 
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
 .process-card{
-  padding:25px 20px;border-top:1px solid #9b65ff80;
+  padding:25px 20px;
+  border-top:1px solid #9b65ff80;
   background:linear-gradient(180deg,#17172a,#0b0c18);
   border-radius:0 0 15px 15px;
 }
@@ -275,7 +421,9 @@ h1{
 .process-card p{font-size:12px;color:var(--muted);line-height:1.8}
 
 .cta{
-  padding:70px 35px;text-align:center;border-radius:28px;
+  padding:70px 35px;
+  text-align:center;
+  border-radius:28px;
   border:1px solid #a37aff55;
   background:radial-gradient(ellipse at 50% 0%,#8055d52e,transparent 65%),#111222;
   box-shadow:0 20px 70px #0005;
@@ -283,21 +431,33 @@ h1{
 .cta h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(30px,4vw,46px);margin:15px 0}
 .cta p{color:var(--muted);font-size:14px;margin-bottom:27px}
 
-.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px}
+.contact-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:40px;
+}
 .contact-info h3{font-size:25px;margin:15px 0}
 .contact-info p{color:var(--muted);font-size:13px;line-height:1.8}
 .contact-detail{margin-top:25px;color:var(--cyan);font-size:14px}
 .contact-form{
-  background:#111222;border:1px solid #ffffff16;
-  border-radius:20px;padding:30px;
+  background:#111222;
+  border:1px solid #ffffff16;
+  border-radius:20px;
+  padding:30px;
 }
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:15px}
 .field{margin-bottom:17px}
 .field label{display:block;font-size:11px;color:#b8b8ca;margin-bottom:9px}
 .field input,.field textarea,.field select{
-  width:100%;padding:14px 15px;border-radius:10px;
-  background:#090a17;border:1px solid #ffffff1c;
-  color:white;font:inherit;font-size:13px;outline:none;
+  width:100%;
+  padding:14px 15px;
+  border-radius:10px;
+  background:#090a17;
+  border:1px solid #ffffff1c;
+  color:white;
+  font:inherit;
+  font-size:13px;
+  outline:none;
 }
 .field input:focus,.field textarea:focus,.field select:focus{border-color:var(--purple)}
 .field textarea{height:120px;resize:vertical}
@@ -305,18 +465,33 @@ h1{
 .contact-form button{border:0;cursor:pointer;width:100%}
 
 footer{padding:35px 0;border-top:1px solid #ffffff13}
-.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center;
+  flex-wrap:wrap;
+}
 footer p{color:#77778f;font-size:11px}
 .footer-links{display:flex;gap:20px;font-size:12px;color:#aaa}
 
-.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s,transform .7s}
+.reveal{
+  opacity:0;
+  transform:translateY(25px);
+  transition:opacity .7s,transform .7s;
+}
 .reveal.show{opacity:1;transform:translateY(0)}
 
 @media(max-width:850px){
   .nav-links{
-    display:none;position:absolute;top:78px;left:0;width:100%;
-    background:#0c0c1c;padding:25px;
-    flex-direction:column;gap:22px;border-bottom:1px solid #ffffff20;
+    display:none;
+    position:absolute;
+    top:78px;left:0;width:100%;
+    background:#0c0c1c;
+    padding:25px;
+    flex-direction:column;
+    gap:22px;
+    border-bottom:1px solid #ffffff20;
   }
   .nav-links.active{display:flex}
   .menu-toggle{display:block}
@@ -350,11 +525,17 @@ footer p{color:#77778f;font-size:11px}
   .about-content h2{font-size:34px}
   .footer-inner{flex-direction:column;text-align:center}
 }
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    scroll-behavior:auto!important;
+    animation-duration:.01ms!important;
+    transition-duration:.01ms!important;
+  }
+}
 </style>
 </head>
 
 <body>
-
 <nav>
   <div class="container nav-inner">
     <a href="#home" class="logo">WEB<span>NOVA.</span></a>
@@ -387,7 +568,6 @@ footer p{color:#77778f;font-size:11px}
       </div>
       <div class="hero-note">DESIGN · DEVELOPMENT · DIGITAL EXPERIENCE</div>
     </div>
-
     <div class="visual reveal">
       <div class="orbit"></div>
       <div class="orbit two"></div>
@@ -407,36 +587,12 @@ footer p{color:#77778f;font-size:11px}
       <p>Everything your brand needs to stand out, connect with people and grow online.</p>
     </div>
     <div class="services-grid">
-      <div class="service-card reveal">
-        <div class="service-icon">✦</div>
-        <h3>Website Design</h3>
-        <p>Beautiful, modern and responsive websites designed to make your brand unforgettable.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon">⌘</div>
-        <h3>Web Development</h3>
-        <p>Fast, reliable and powerful websites built for performance and real-world use.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon">◈</div>
-        <h3>E-Commerce</h3>
-        <p>Online stores that make product discovery and shopping simple and seamless.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon">◎</div>
-        <h3>Brand Identity</h3>
-        <p>Distinctive visual identities that communicate your brand's personality.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon">✧</div>
-        <h3>UI / UX Design</h3>
-        <p>Intuitive user experiences with thoughtful layouts and beautiful interfaces.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon">↗</div>
-        <h3>Digital Growth</h3>
-        <p>Creative digital solutions to help your business reach more customers.</p>
-      </div>
+      <div class="service-card reveal"><div class="service-icon">✦</div><h3>Website Design</h3><p>Beautiful, modern and responsive websites designed to make your brand unforgettable.</p></div>
+      <div class="service-card reveal"><div class="service-icon">⌘</div><h3>Web Development</h3><p>Fast, reliable and powerful websites built for performance and real-world use.</p></div>
+      <div class="service-card reveal"><div class="service-icon">◈</div><h3>E-Commerce</h3><p>Online stores that make product discovery and shopping simple and seamless.</p></div>
+      <div class="service-card reveal"><div class="service-icon">◎</div><h3>Brand Identity</h3><p>Distinctive visual identities that communicate your brand's personality.</p></div>
+      <div class="service-card reveal"><div class="service-icon">✧</div><h3>UI / UX Design</h3><p>Intuitive user experiences with thoughtful layouts and beautiful interfaces.</p></div>
+      <div class="service-card reveal"><div class="service-icon">↗</div><h3>Digital Growth</h3><p>Creative digital solutions to help your business reach more customers.</p></div>
     </div>
   </div>
 </section>
@@ -449,88 +605,34 @@ footer p{color:#77778f;font-size:11px}
       <p>Explore our website concepts and discover what your next digital experience could look like.</p>
     </div>
     <div class="portfolio-grid">
-
       <article class="project reveal">
-        <div class="project-art art-restaurant">
-          <div class="mock-window">
-            <div class="mock-dots"><i></i><i></i><i></i></div>
-            <div class="mock-line"></div><div class="mock-line big"></div>
-            <div class="mock-blocks"><i></i><i></i><i></i></div>
-          </div>
-        </div>
-        <div class="project-info">
-          <div class="project-top"><h3>Restaurant Website</h3><span class="tag">FOOD & DINING</span></div>
-          <p>A stylish digital experience for restaurants and dining brands.</p>
-          <a class="project-link" href="restaurant-demo.html">VIEW LIVE DEMO ↗</a>
-        </div>
+        <div class="project-art art-restaurant"><div class="mock-window"><div class="mock-dots"><i></i><i></i><i></i></div><div class="mock-line"></div><div class="mock-line big"></div><div class="mock-blocks"><i></i><i></i><i></i></div></div></div>
+        <div class="project-info"><div class="project-top"><h3>Restaurant Website</h3><span class="tag">FOOD & DINING</span></div><p>A stylish digital experience for restaurants and dining brands.</p><a class="project-link" href="restaurant-demo.html">VIEW LIVE DEMO ↗</a></div>
       </article>
-
       <article class="project reveal">
-        <div class="project-art art-business">
-          <div class="mock-window">
-            <div class="mock-dots"><i></i><i></i><i></i></div>
-            <div class="mock-line"></div><div class="mock-line big"></div>
-            <div class="mock-blocks"><i></i><i></i><i></i></div>
-          </div>
-        </div>
-        <div class="project-info">
-          <div class="project-top"><h3>Business Website</h3><span class="tag">CORPORATE</span></div>
-          <p>A professional website concept for modern businesses and companies.</p>
-          <a class="project-link" href="business-demo.html">VIEW LIVE DEMO ↗</a>
-        </div>
+        <div class="project-art art-business"><div class="mock-window"><div class="mock-dots"><i></i><i></i><i></i></div><div class="mock-line"></div><div class="mock-line big"></div><div class="mock-blocks"><i></i><i></i><i></i></div></div></div>
+        <div class="project-info"><div class="project-top"><h3>Business Website</h3><span class="tag">CORPORATE</span></div><p>A professional website concept for modern businesses and companies.</p><a class="project-link" href="business-demo.html">VIEW LIVE DEMO ↗</a></div>
       </article>
-
       <article class="project reveal">
-        <div class="project-art art-salon">
-          <div class="mock-window">
-            <div class="mock-dots"><i></i><i></i><i></i></div>
-            <div class="mock-line"></div><div class="mock-line big"></div>
-            <div class="mock-blocks"><i></i><i></i><i></i></div>
-          </div>
-        </div>
-        <div class="project-info">
-          <div class="project-top"><h3>Salon Website</h3><span class="tag">BEAUTY</span></div>
-          <p>An elegant website concept for salons, beauty studios and spas.</p>
-          <a class="project-link" href="salon-demo.html">VIEW LIVE DEMO ↗</a>
-        </div>
+        <div class="project-art art-salon"><div class="mock-window"><div class="mock-dots"><i></i><i></i><i></i></div><div class="mock-line"></div><div class="mock-line big"></div><div class="mock-blocks"><i></i><i></i><i></i></div></div></div>
+        <div class="project-info"><div class="project-top"><h3>Salon Website</h3><span class="tag">BEAUTY</span></div><p>An elegant website concept for salons, beauty studios and spas.</p><a class="project-link" href="salon-demo.html">VIEW LIVE DEMO ↗</a></div>
       </article>
-
       <article class="project reveal">
-        <div class="project-art art-creative">
-          <div class="mock-window">
-            <div class="mock-dots"><i></i><i></i><i></i></div>
-            <div class="mock-line"></div><div class="mock-line big"></div>
-            <div class="mock-blocks"><i></i><i></i><i></i></div>
-          </div>
-        </div>
-        <div class="project-info">
-          <div class="project-top"><h3>Creative Web Experience</h3><span class="tag">CREATIVE</span></div>
-          <p>A bold digital direction for brands looking for something different.</p>
-          <a class="project-link" href="#contact">DISCUSS A PROJECT ↗</a>
-        </div>
+        <div class="project-art art-creative"><div class="mock-window"><div class="mock-dots"><i></i><i></i><i></i></div><div class="mock-line"></div><div class="mock-line big"></div><div class="mock-blocks"><i></i><i></i><i></i></div></div></div>
+        <div class="project-info"><div class="project-top"><h3>Creative Web Experience</h3><span class="tag">CREATIVE</span></div><p>A bold digital direction for brands looking for something different.</p><a class="project-link" href="#contact">DISCUSS A PROJECT ↗</a></div>
       </article>
-
     </div>
   </div>
 </section>
 
 <section class="section" id="about">
   <div class="container about-grid">
-    <div class="about-visual reveal">
-      <div class="about-symbol">NOVA</div>
-    </div>
+    <div class="about-visual reveal"><div class="about-symbol">NOVA</div></div>
     <div class="about-content reveal">
       <div class="kicker">ABOUT WEBNOVA</div>
       <h2>We don't follow the future. <span class="gradient-text">We create it.</span></h2>
-      <p>
-        WEBNOVA is a digital creative studio focused on building memorable
-        online experiences. We combine modern design, thoughtful development
-        and creative ideas to help businesses establish a strong digital presence.
-      </p>
-      <p>
-        From a simple business website to a complete online store,
-        we believe every brand deserves a digital experience that feels special.
-      </p>
+      <p>WEBNOVA is a digital creative studio focused on building memorable online experiences. We combine modern design, thoughtful development and creative ideas to help businesses establish a strong digital presence.</p>
+      <p>From a simple business website to a complete online store, we believe every brand deserves a digital experience that feels special.</p>
       <div class="stats">
         <div class="stat"><strong>01</strong><span>Creative thinking</span></div>
         <div class="stat"><strong>∞</strong><span>Fresh possibilities</span></div>
@@ -584,17 +686,11 @@ footer p{color:#77778f;font-size:11px}
       </div>
       <form class="contact-form reveal" id="contactForm">
         <div class="form-row">
-          <div class="field">
-            <label>Your Name</label>
-            <input id="name" type="text" placeholder="Enter your name" required>
-          </div>
-          <div class="field">
-            <label>Email Address</label>
-            <input id="email" type="email" placeholder="Enter your email" required>
-          </div>
+          <div class="field"><label for="name">Your Name</label><input id="name" type="text" placeholder="Enter your name" required></div>
+          <div class="field"><label for="email">Email Address</label><input id="email" type="email" placeholder="Enter your email" required></div>
         </div>
         <div class="field">
-          <label>What do you need?</label>
+          <label for="service">What do you need?</label>
           <select id="service" required>
             <option value="">Choose a service</option>
             <option>Business Website</option>
@@ -605,10 +701,7 @@ footer p{color:#77778f;font-size:11px}
             <option>Other</option>
           </select>
         </div>
-        <div class="field">
-          <label>Project Details</label>
-          <textarea id="message" placeholder="Tell us about your project..." required></textarea>
-        </div>
+        <div class="field"><label for="message">Project Details</label><textarea id="message" placeholder="Tell us about your project..." required></textarea></div>
         <button type="submit" class="primary-btn">SEND PROJECT DETAILS ↗</button>
       </form>
     </div>
@@ -654,27 +747,33 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
   const service = document.getElementById("service").value;
   const message = document.getElementById("message").value.trim();
 
-  const text =
-    "Hello WEBNOVA!%0A%0A" +
-    "Name: " + encodeURIComponent(name) + "%0A" +
-    "Email: " + encodeURIComponent(email) + "%0A" +
-    "Service: " + encodeURIComponent(service) + "%0A" +
-    "Project: " + encodeURIComponent(message);
+  const text = [
+    "Hello WEBNOVA!",
+    "",
+    "Name: " + name,
+    "Email: " + email,
+    "Service: " + service,
+    "Project: " + message
+  ].join("\n");
 
-  window.open("https://wa.me/966531916632?text=" + text, "_blank");
+  const whatsappURL = "https://wa.me/966531916632?text=" + encodeURIComponent(text);
+  window.open(whatsappURL, "_blank", "noopener");
 });
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-      observer.unobserve(entry.target);
-    }
-  });
-}, {threshold:0.12});
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12});
 
-document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-  <!-- WEBNOVA deployment refresh -->
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+} else {
+  document.querySelectorAll(".reveal").forEach(el => el.classList.add("show"));
+}
 </script>
 
 </body>
